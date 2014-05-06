@@ -1,0 +1,59 @@
+\documentclass[b5j,10pt]{jarticle}
+\pagestyle{empty}
+
+%\special{dviout -y=F150mm:210mm}
+\special{pdf: pagesize width 150truemm height 210truemm}
+
+
+\topmargin=-0.0mm
+\oddsidemargin=-0.0mm
+\textwidth=87.0mm
+\textheight=180mm
+%dvipdfmx -p "150mm,210mm" foo
+
+
+\headsep=0mm
+\parindent=0mm
+\tabcolsep=1mm
+
+
+
+
+\usepackage{bm}
+\def\ds{\displaystyle}
+
+
+
+\begin{document}
+
+\section*{一般的な関係式}
+
+
+\def\arraystretch{2}
+\begin{tabular}{|p{27mm}||c|c|} \hline
+\hfil 意　　味	& 　並　進　運　動　	& 　回　転　運　動　 \\ \hline\hline
+運動を変える作用	& $\bm{F}$	& $\bm{N} \equiv \bm{r} \times \bm{F} $ \\ \hline
+\hfil 勢　い	& $\bm{p} \equiv m \bm{v}$	& $\bm{L} \equiv \bm{r}\times \bm{p} $ \\ \hline
+\hfil 運動方程式	& $\ds \bm{F} = \frac{d}{dt} \bm{p}$	& $\ds \bm{N} = \frac{d}{dt} \bm{L}$ \\ \hline
+\end{tabular}
+
+
+
+\section*{回転軸を固定させた場合}
+
+
+
+
+\def\arraystretch{2}
+\begin{tabular}{|p{27mm}||c|c|} \hline
+\hfil 意　味	& 　並　進　運　動　	& 　回　転　運　動　 \\ \hline\hline
+\hfil 座　標	& $x$[m]	& $\theta$[rad] \\ \hline
+\hfil 速　さ	& $\ds v \equiv \frac{dx}{dt}$[m/s]	& $\ds \omega \equiv \frac{d \theta}{dt}$[rad/s] \\ \hline
+\hfil 加　速	& $\ds a \equiv \frac{dv}{dt}$[m/s$^2$]	& $\ds \alpha \equiv \frac{d \omega}{dt}$[rad/s$^2$] \\ \hline
+\hfil 慣　性	& $m$[kg]	& $\ds I \equiv \sum_j m_j r_j^2$ \\ \hline
+\hfil 勢　い	& $p \equiv m v$	& $L \equiv I \omega $ \\ \hline
+\hfil 運動方程式	& $\ds F = m \frac{d^2}{dt^2}x$	& $\ds N = I \frac{d^2}{dt^2} \theta$ \\ \hline
+\hfil 運動エネルギー	& $\ds K \equiv \frac{1}{2} m v^2$	& $\ds K_R \equiv \frac{1}{2} I \omega^2$ \\ \hline
+\end{tabular}
+
+\end{document}

@@ -1,0 +1,43 @@
+\ProvidesPackage{kousiki}
+
+
+%papersize = A8P
+\special{dviout -y=F52mm:74mm}
+\special{pdf: pagesize width 52truemm height 74truemm}
+
+
+%両脇3mmの空き
+\oddsidemargin=-22.4mm
+\textwidth=46mm
+
+
+%上下2mmの空き
+\topmargin=-23.4mm
+\headheight=5mm
+\headsep=3mm
+\textheight=62mm
+
+
+\parindent=0mm
+\tabcolsep=0.5mm
+
+
+%ヘッダーの調節
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead{\thepage{}/{}\pageref{LastPage}}
+\lhead{\leftmark}
+
+
+%「しおり」付きのpdfを作る
+\usepackage[dvipdfmx,%
+ bookmarks=true,%
+ bookmarksnumbered=false,%
+ colorlinks=false,%
+ setpagesize=false,%
+ pdftitle={物理公式集},%
+ pdfauthor={松崎　俊明},%
+ pdfsubject={高専物理向けの公式集},%
+ pdfkeywords={高専; 物理; 公式;}]{hyperref}
+\usepackage{pxjahyper}
